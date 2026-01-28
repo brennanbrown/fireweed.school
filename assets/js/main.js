@@ -7,16 +7,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// Check if device is mobile - more reliable detection
+const isMobile = () => {
+  return window.innerWidth <= 768 || 
+         'ontouchstart' in window || 
+         navigator.maxTouchPoints > 0 ||
+         /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+};
+
 // Intersection Observer for scroll animations
 const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -100px 0px'
+  threshold: isMobile() ? 0.05 : 0.1,
+  rootMargin: isMobile() ? '0px 0px -50px 0px' : '0px 0px -100px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+      // On mobile, add visible class immediately without animation
+      if (isMobile()) {
+        entry.target.classList.add('visible', 'no-animate');
+      } else {
+        entry.target.classList.add('visible');
+      }
     }
   });
 }, observerOptions);
