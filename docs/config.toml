@@ -1,0 +1,21 @@
+baseURL = 'https://fireweed.school'
+languageCode = 'en-us'
+title = 'Fireweed Writing School'
+description = 'An online writing class built on renewal, persistence, and the radical liberation of putting words on paper.'
+
+[params]
+  author = 'Brennan Kenneth Brown'
+  email = 'mail@brennanbrown.ca'
+  patreon = 'patreon.com/brennankbrown'
+  website = 'brennan.day'
+  launchDate = 'Summer 2026'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputFormats]
+  [outputFormats.CSS]
+    mediaType = "text/css"
+    baseName = "styles"
