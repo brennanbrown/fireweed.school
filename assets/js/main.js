@@ -7,6 +7,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// Progress bar
+const updateProgressBar = () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollProgress = (scrollTop / scrollHeight) * 100;
+  
+  const progressBar = document.getElementById('progress-bar');
+  if (progressBar) {
+    progressBar.style.transform = `translateX(-${100 - scrollProgress}%)`;
+  }
+};
+
+// Update progress bar on scroll
+window.addEventListener('scroll', updateProgressBar);
+// Update progress bar on load
+window.addEventListener('load', updateProgressBar);
+// Update progress bar on resize
+window.addEventListener('resize', updateProgressBar);
+
 // Check if device is mobile - more reliable detection
 const isMobile = () => {
   return window.innerWidth <= 768 || 

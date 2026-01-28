@@ -2,6 +2,9 @@
 <html lang="{{ site.LanguageCode }}">
   {{ partial "head.html" . }}
   <body>
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-fireweed-magenta via-rose-purple to-fireweed-magenta transform -translate-x-full transition-transform duration-150 ease-out z-50"></div>
+    
     {{ block "main" . }}{{ end }}
     {{ partial "footer.html" . }}
     
