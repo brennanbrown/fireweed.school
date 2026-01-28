@@ -2,7 +2,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ if .Title }}{{ .Title }} - {{ end }}{{ site.Title }}</title>
-  <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ site.Description }}{{ end }}">
+  <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ site.Params.Description }}{{ end }}">
   
   <!-- SEO Meta Tags -->
   <meta name="keywords" content="writing class, online writing course, creative writing, poetry, fiction, Brennan Brown, Fireweed Writing School, Calgary, Alberta, Treaty 7">
@@ -28,7 +28,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ site.Title }}{{ end }}">
-  <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ site.Description }}{{ end }}">
+  <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ site.Params.Description }}{{ end }}">
   <meta property="og:image" content="{{ site.BaseURL }}images/fireweed-photo.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -40,7 +40,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="{{ .Permalink }}">
   <meta name="twitter:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ site.Title }}{{ end }}">
-  <meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ site.Description }}{{ end }}">
+  <meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ site.Params.Description }}{{ end }}">
   <meta name="twitter:image" content="{{ site.BaseURL }}images/fireweed-photo.jpg">
   <meta name="twitter:image:alt" content="Fireweed flowers blooming in nature - symbol of renewal and persistence">
   <meta name="twitter:creator" content="@brennankbrown">
@@ -52,7 +52,7 @@
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "name": "{{ site.Title }}",
-    "description": "{{ site.Description }}",
+    "description": "{{ site.Params.Description }}",
     "url": "{{ site.BaseURL }}",
     "logo": "{{ site.BaseURL }}favicon.ico",
     "image": "{{ site.BaseURL }}images/fireweed-photo.jpg",

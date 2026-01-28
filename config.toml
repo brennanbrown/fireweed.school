@@ -1,9 +1,9 @@
 baseURL = 'https://fireweed.school'
 languageCode = 'en-us'
 title = 'Fireweed Writing School'
-description = 'An online writing class built on renewal, persistence, and the radical liberation of putting words on paper.'
 
 [params]
+  description = 'An online writing class built on renewal, persistence, and the radical liberation of putting words on paper.'
   author = 'Brennan Kenneth Brown'
   email = 'mail@brennanbrown.ca'
   patreon = 'patreon.com/brennankbrown'
