@@ -4,31 +4,101 @@
   <title>{{ if .Title }}{{ .Title }} - {{ end }}{{ site.Title }}</title>
   <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ site.Description }}{{ end }}">
   
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="writing class, online writing course, creative writing, poetry, fiction, Brennan Brown, Fireweed Writing School, Calgary, Alberta, Treaty 7">
+  <meta name="author" content="Brennan Kenneth Brown">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="geo.region" content="CA-AB">
+  <meta name="geo.placename" content="Calgary">
+  <meta name="geo.position" content="51.0447;-114.0719">
+  <meta name="ICBM" content="51.0447, -114.0719">
+  
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
   <!-- CSS -->
   <link rel="stylesheet" href="/css/styles.css">
   
-  <!-- Open Graph -->
-  <meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ site.Title }}{{ end }}">
-  <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ site.Description }}{{ end }}">
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ .Permalink }}">
-  <meta property="og:image" content="{{ site.BaseURL }}images/og-image.jpg">
+  <meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ site.Title }}{{ end }}">
+  <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ site.Description }}{{ end }}">
+  <meta property="og:image" content="{{ site.BaseURL }}images/fireweed-photo.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Fireweed flowers blooming in nature - symbol of renewal and persistence">
+  <meta property="og:site_name" content="{{ site.Title }}">
+  <meta property="og:locale" content="en_US">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="{{ .Permalink }}">
   <meta name="twitter:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ site.Title }}{{ end }}">
   <meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ site.Description }}{{ end }}">
-  <meta name="twitter:image" content="{{ site.BaseURL }}images/twitter-card.jpg">
+  <meta name="twitter:image" content="{{ site.BaseURL }}images/fireweed-photo.jpg">
+  <meta name="twitter:image:alt" content="Fireweed flowers blooming in nature - symbol of renewal and persistence">
+  <meta name="twitter:creator" content="@brennankbrown">
+  <meta name="twitter:site" content="@brennankbrown">
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "{{ site.Title }}",
+    "description": "{{ site.Description }}",
+    "url": "{{ site.BaseURL }}",
+    "logo": "{{ site.BaseURL }}favicon.ico",
+    "image": "{{ site.BaseURL }}images/fireweed-photo.jpg",
+    "founder": {
+      "@type": "Person",
+      "name": "Brennan Kenneth Brown",
+      "sameAs": [
+        "https://brennan.day",
+        "https://ko-fi.com/brennan",
+        "https://twitter.com/brennankbrown"
+      ]
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Calgary",
+      "addressRegion": "AB",
+      "addressCountry": "CA"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Writing Classes",
+      "itemListElement": [
+        {
+          "@type": "Course",
+          "name": "Fireweed Writing School",
+          "description": "Online writing class focused on craft, discipline, and publication",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "{{ site.Title }}"
+          }
+        }
+      ]
+    }
+  }
+  </script>
   
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="{{ site.BaseURL }}favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.BaseURL }}images/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.BaseURL }}images/favicon-32x32.png">
-  <link rel="apple-touch-icon" href="{{ site.BaseURL }}images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.BaseURL }}favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.BaseURL }}favicon-32x32.png">
+  <link rel="apple-touch-icon" href="{{ site.BaseURL }}apple-touch-icon.png">
+  <link rel="manifest" href="{{ site.BaseURL }}site.webmanifest">
   
-  <!-- Canonical URL -->
+  <!-- Additional SEO -->
   <link rel="canonical" href="{{ .Permalink }}">
+  <meta name="theme-color" content="#C13584">
+  <meta name="msapplication-TileColor" content="#C13584">
+  <meta name="msapplication-config" content="{{ site.BaseURL }}browserconfig.xml">
 </head>
