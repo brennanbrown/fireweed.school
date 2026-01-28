@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode }}">
+  {{ partial "head.html" . }}
+  <body>
+    {{ block "main" . }}{{ end }}
+    {{ partial "footer.html" . }}
+    
+    <!-- Floating CTA Button -->
+    <a href="#signup" 
+       class="fixed top-4 right-4 z-50 bg-fireweed-magenta text-warm-cream px-4 py-2 rounded-full shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300 flex items-center gap-2 text-lg font-garamond animate-pulse">
+      <span>🌸</span>
+      <i class="fas fa-arrow-down text-sm"></i>
+    </a>
+    
+    <!-- JavaScript -->
+    {{ $js := resources.Get "js/main.js" }}
+    {{ if hugo.IsProduction }}
+      {{ $js = $js | minify | fingerprint }}
+    {{ end }}
+    <script src="{{ $js.RelPermalink }}"></script>
+  </body>
+</html>

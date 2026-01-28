@@ -1,0 +1,114 @@
+<section id="signup" class="section-container bg-warm-cream">
+  
+  <div class="max-w-2xl mx-auto">
+    
+    <!-- Decorative fireweed element -->
+    <div class="flex justify-center mb-4">
+      <img src="/images/fireweed-transparent.png" 
+           alt="Fireweed decoration" 
+           class="w-32 h-32 opacity-60">
+    </div>
+    
+    <!-- Headline -->
+    <h2 class="text-section-mobile md:text-section font-garamond italic font-semibold text-rose-purple text-center mb-4 animate-fade-in">
+      Write from ash. Bloom in devastation.
+    </h2>
+    
+    <!-- Subheadline -->
+    <p class="text-subheader font-garamond text-ash-gray text-center mb-12 animate-fade-in">
+      Join the waitlist to be notified when enrollment opens
+    </p>
+    
+    <!-- Signup Form -->
+    <div class="bg-soft-ivory p-8 rounded-lg shadow-lg animate-fade-in">
+      <form
+        name="waitlist"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        class="space-y-6"
+      >
+        <!-- Honeypot field -->
+        <input type="hidden" name="form-name" value="waitlist" />
+        <p class="hidden">
+          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+        
+        <div class="space-y-4">
+          <!-- Name Field -->
+          <div>
+            <label for="name" class="block text-lg font-garamond text-ash-gray mb-2">
+              Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              class="w-full px-4 py-3 border-2 border-charcoal/20 rounded-lg 
+                     focus:border-rose-purple focus:ring-2 focus:ring-rose-purple/20 
+                     font-garamond text-lg transition-colors bg-warm-cream"
+              placeholder="Your name"
+            />
+          </div>
+          
+          <!-- Email Field -->
+          <div>
+            <label for="email" class="block text-lg font-garamond text-ash-gray mb-2">
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              class="w-full px-4 py-3 border-2 border-charcoal/20 rounded-lg 
+                     focus:border-rose-purple focus:ring-2 focus:ring-rose-purple/20 
+                     font-garamond text-lg transition-colors bg-warm-cream"
+              placeholder="your@email.com"
+            />
+          </div>
+          
+          <!-- Optional: Current Work -->
+          <div>
+            <label for="current_work" class="block text-lg font-garamond text-ash-gray mb-2">
+              What are you currently working on? <span class="text-charcoal/60">(optional)</span>
+            </label>
+            <textarea
+              name="current_work"
+              id="current_work"
+              rows="4"
+              class="w-full px-4 py-3 border-2 border-charcoal/20 rounded-lg 
+                     focus:border-rose-purple focus:ring-2 focus:ring-rose-purple/20 
+                     font-garamond text-lg transition-colors resize-none bg-warm-cream"
+              placeholder="Tell me about your writing project..."
+            ></textarea>
+          </div>
+        </div>
+        
+        <!-- Submit Button -->
+        <button type="submit" class="btn-primary w-full">
+          Join the Fireweed Writing School
+        </button>
+        
+        <!-- Disclaimer -->
+        <p class="text-center text-base text-charcoal/70 italic font-garamond">
+          I won't send you promotional emails or marketing.<br />
+          Just one message when we're ready to begin.
+        </p>
+      </form>
+      
+      <!-- Success Message (hidden by default) -->
+      <div id="success-message" class="hidden text-center py-8">
+        <i class="fas fa-check-circle text-6xl text-forest-green mb-6"></i>
+        <h3 class="text-3xl font-garamond italic text-fireweed-magenta mb-4">
+          Welcome to the club
+        </h3>
+        <p class="text-xl font-garamond text-ash-gray">
+          You'll hear from me soon. Keep writing.
+        </p>
+      </div>
+    </div>
+    
+  </div>
+</section>
