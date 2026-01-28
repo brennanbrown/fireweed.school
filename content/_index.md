@@ -3,7 +3,7 @@ title: "Fireweed Writing School"
 description: "An online writing class built on renewal, persistence, and the radical liberation of putting words on paper."
 layout: "landing"
 hero:
-  title: "The Fireweed Writing School"
+  title: "Fireweed Writing School"
   subtitle: "Write from ash. Bloom in devastation. An online writing class for those ready to persist."
   cta: "Join the Waitlist"
   launchText: "Classes begin Summer 2026"
