@@ -75,6 +75,25 @@ npm run build
 # Deploy the contents of the public/ directory to your web server
 ```
 
+## Color Palette
+
+The site uses a custom color palette defined in `tailwind.config.js`:
+
+### Primary Colors
+- **Fireweed Magenta** (`#C13584`) - Primary brand color
+- **Rose Purple** (`#B8336A`) - Secondary accent
+- **Deep Pink** (`#E75480`) - Bright accent for highlights
+
+### Neutral Colors
+- **Ash Gray** (`#2D2D2D`) - Dark text/headers
+- **Charcoal** (`#3A3A3A`) - Secondary dark text
+- **Warm Cream** (`#F5F1E8`) - Light background
+- **Soft Ivory** (`#FFFDF7`) - Main background
+
+### Nature-Inspired Accents
+- **Reddish Stem** (`#8B4049`) - Earthy red accent
+- **Forest Green** (`#4A7C59`) - Natural green accent
+
 ## Customization
 
 ### Colors
