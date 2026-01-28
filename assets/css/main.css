@@ -1,0 +1,129 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom font imports */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    @apply font-garamond text-body text-ash-gray bg-warm-cream;
+  }
+  
+  h1 {
+    @apply font-garamond italic font-semibold;
+  }
+  
+  h2 {
+    @apply font-garamond italic font-semibold;
+  }
+  
+  h3 {
+    @apply font-garamond font-semibold;
+  }
+  
+  /* Global link styles */
+  a {
+    @apply underline decoration-2 underline-offset-4 transition-all duration-300 ease-in-out;
+  }
+  
+  a:hover {
+    @apply text-fireweed-magenta decoration-fireweed-magenta;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-rose-purple text-warm-cream px-8 py-4 text-2xl font-bold rounded-lg 
+           no-underline hover:bg-rose-purple/90 hover:text-warm-cream hover:decoration-transparent hover:scale-105 active:scale-95 
+           transition-all duration-200 ease-in-out;
+  }
+  
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24;
+  }
+  
+  .prose-fireweed {
+    @apply prose prose-xl max-w-readable;
+  }
+  
+  .prose-fireweed h1,
+  .prose-fireweed h2,
+  .prose-fireweed h3 {
+    @apply text-ash-gray;
+  }
+  
+  .prose-fireweed p {
+    @apply text-ash-gray text-body;
+  }
+  
+  .prose-fireweed em {
+    @apply text-rose-purple;
+  }
+  
+  .prose-invert-fireweed {
+    @apply prose prose-invert prose-xl max-w-readable;
+  }
+  
+  .prose-invert-fireweed h1,
+  .prose-invert-fireweed h2,
+  .prose-invert-fireweed h3 {
+    @apply text-warm-cream;
+  }
+  
+  .prose-invert-fireweed p {
+    @apply text-warm-cream text-body;
+  }
+  
+  .prose-invert-fireweed em {
+    @apply text-fireweed-magenta;
+  }
+  
+  /* Override prose alignment issues */
+  .prose-invert-fireweed.text-center {
+    text-align: center !important;
+    max-width: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .prose-invert-fireweed.text-center p {
+    text-align: center !important;
+    max-width: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .prose-fireweed.text-center {
+    text-align: center !important;
+    max-width: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .prose-fireweed.text-center p {
+    text-align: center !important;
+    max-width: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+@layer utilities {
+  .text-gradient-fireweed {
+    @apply bg-gradient-to-r from-deep-pink to-rose-purple bg-clip-text text-transparent;
+  }
+  
+  .text-large {
+    @apply text-body-large;
+  }
+  
+  .animate-fade-in {
+    @apply opacity-0 translate-y-4 transition-all ease-out;
+  }
+  
+  .animate-fade-in.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
