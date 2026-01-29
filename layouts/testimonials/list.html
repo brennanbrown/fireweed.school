@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+<body class="bg-charcoal">
+  {{ partial "nav.html" . }}
+  
+  <!-- Hero Section -->
+  <section class="section-container bg-charcoal relative overflow-hidden">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-display-mobile md:text-display font-garamond italic font-semibold text-warm-cream mb-6 animate-fade-in">
+        Recommendations
+      </h1>
+      <p class="text-xl md:text-2xl font-garamond text-warm-cream/80 max-w-3xl mx-auto animate-fade-in">
+        Words from colleagues, mentors, and students I've had the privilege of working with
+      </p>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  {{ partial "testimonials.html" . }}
+  
+  {{ partial "footer.html" . }}
+  {{ partial "scripts.html" . }}
+</body>
+</html>
