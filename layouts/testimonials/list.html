@@ -2,7 +2,6 @@
 <html lang="en">
 {{ partial "head.html" . }}
 <body class="bg-charcoal">
-  {{ partial "nav.html" . }}
   
   <!-- Hero Section -->
   <section class="section-container bg-charcoal relative overflow-hidden">
@@ -17,9 +16,26 @@
   </section>
 
   <!-- Testimonials Section -->
-  {{ partial "testimonials.html" . }}
+  <section class="section-container bg-charcoal relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-10 left-10 w-32 h-32 bg-fireweed-magenta rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-48 h-48 bg-rose-purple rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="max-w-4xl mx-auto relative z-10">
+      <!-- Back Button -->
+      <div class="mb-8 animate-fade-in">
+        <a href="/" class="inline-flex items-center gap-2 text-warm-cream/80 hover:text-warm-cream transition-colors font-garamond">
+          <i class="fas fa-arrow-left"></i>
+          Back to Home
+        </a>
+      </div>
+      
+      {{ partial "testimonials.html" . }}
+    </div>
+  </section>
   
   {{ partial "footer.html" . }}
-  {{ partial "scripts.html" . }}
 </body>
 </html>
